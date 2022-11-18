@@ -6,6 +6,7 @@ import AuthContext from '../store/authContext';
 const Auth = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [location, setLocation] = useState('')
   const [register, setRegister] = useState(true)
 
   const authCtx = useContext(AuthContext)
