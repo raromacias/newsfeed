@@ -61,7 +61,7 @@ const Auth = () => {
                    onChange={e => setLocation(e.target.value)}
                    />
                <button className={styles.formbtn}>
-                  Sign Up
+                  Submit
                </button>
            </form>
            </div>
@@ -79,7 +79,7 @@ const Auth = () => {
                    value={password}
                    onChange={e => setPassword(e.target.value) }/>
                <button className={styles.formbtn}>
-                   Login
+                   Submit
                </button>
            </form>
            </div>
