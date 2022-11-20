@@ -60,3 +60,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

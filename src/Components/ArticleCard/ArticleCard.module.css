@@ -1,7 +1,14 @@
 .artcontainer {
-  background-color: blue;
+  display: flex;
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
 }
 
 .newsImage {
-  width:100px;
+  object-fit: cover;
+  width: 320px;
+  height: 268px;
 }

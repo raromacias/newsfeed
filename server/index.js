@@ -22,7 +22,7 @@ app.use(cors())
 app.post('/register', register)
 app.post('/login', login)
 
-sequelize.sync({force:true})
+sequelize.sync()
 .then(() => {
   app.listen(SERVER_PORT, () => console.log(`Up on ${SERVER_PORT}`))
 })
