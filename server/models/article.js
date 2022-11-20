@@ -15,10 +15,9 @@ module.exports = {
       type: DataTypes.INTEGER
     },
     description: DataTypes.STRING,
-    image_url: DataTypes.STRING,
-    link: DataTypes.STRING,
-    pubDate: DataTypes.STRING,
-    source_id: DataTypes.STRING,
+    urlToImage: DataTypes.STRING,
+    url: DataTypes.STRING,
+    publishedAt: DataTypes.STRING,
     title: DataTypes.STRING
   })
 }
