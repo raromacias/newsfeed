@@ -54,7 +54,11 @@ getData();
                       } 
             />
           <Route path='/auth' element={!authCtx.token ? <Auth/> : <Navigate to='/'/>}/>
-          <Route path='/profile' element={authCtx ? <Profile/> : <Navigate to='/auth'/>}/>
+          <Route path='/profile' element={authCtx ? <Profile
+           newsResults={newsResults}
+           newsArray={newsArray}
+           loadMore={loadMore}
+           setLoadMore={setLoadMore}/> : <Navigate to='/auth'/>}/>
           <Route path='/favorites' element={authCtx ? <Favorites/> : <Navigate to='/auth'/>}/>
           
         </Routes>
