@@ -23,13 +23,15 @@ module.exports = {
   
   
   addArticle: async (req,res) => {
+    console.log(req.body)
     try {
       const { 
         description,
         urlToImage,
         url,
         publishedAt,
-        title} = req.body;
+        title
+      } = req.body;
         const {userId} = req.params
         await Article.create({
           description,

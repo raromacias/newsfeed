@@ -23,6 +23,20 @@ const Favorites = () => {
       getCurrentUserArticles()
     },[getCurrentUserArticles])
 
+    const deleteArticle = id => {
+      axios.delete(`http://localhost:4545/favorites/${id}`, {
+          headers: {
+              authorization: token
+          }
+      })
+          .then(() => {
+              getCurrentUserArticles()
+          })
+          .catch(err => {
+              console.log(err)
+          })
+  }
+
     
   return articles.length >= 1 ? (
     <div className={styles.favoritescard}>
@@ -33,6 +47,14 @@ const Favorites = () => {
               <h2>{article.title}</h2>
               <h4>{article.publishedAt}</h4>
               <p>{article.description}</p>
+              {
+                userId === article.userId && 
+                <div>
+                   <button className={styles.formbtn} style={{marginLeft: 10}} onClick={() => deleteArticle(article.id)}>
+                            Remove from Favorites
+                        </button>
+                </div>
+              }
           </div>
             )
            })}

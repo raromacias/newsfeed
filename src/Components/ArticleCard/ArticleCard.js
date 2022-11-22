@@ -25,7 +25,7 @@ const ArticleCard = ({newsItem}) => {
           url: newsItem.url,
           publishedAt: newsItem.publishedAt,
           title: newsItem.title,
-          userId 
+          userId: +userId 
     }
     axios.post(`http://localhost:4545/favorites/${userId}`, body, {
         headers: {
