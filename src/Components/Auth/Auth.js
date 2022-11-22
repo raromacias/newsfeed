@@ -11,7 +11,7 @@ const Auth = () => {
   const [register, setRegister] = useState(true)
 
   const authCtx = useContext(AuthContext)
-
+ 
   const handleAuth = e => {
     e.preventDefault()
 

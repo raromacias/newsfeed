@@ -17,7 +17,7 @@ const ArticleCard = ({newsItem}) => {
         src={
           newsItem.urlToImage
             ? newsItem.urlToImage
-            : "No Image available"
+            : null
         }
         className={styles.newsImage}
         />
@@ -26,7 +26,6 @@ const ArticleCard = ({newsItem}) => {
           <span className="title">{newsItem.title}</span>
           <br />
             <a href={newsItem.url} target="__blank">
-              <b>short </b>
             </a>{" "}
             <span className="muted">
               {" "}

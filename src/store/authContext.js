@@ -83,14 +83,14 @@ export const AuthContextProvider = (props) => {
         }
     }, [])
 
-    const login = (token, exp, userId, location, username) => {
-        setUserId(+userId)
+    const login = (token, exp, location, username, userId) => {
+        setUserId(userId)
         setToken(token)
         setLocation(location)
         setUsername(username)
 
         localStorage.setItem('token', token)
-        localStorage.setItem('userId', +userId)
+        localStorage.setItem('userId', userId)
         localStorage.setItem('location', location)
         localStorage.setItem('username', username)
         localStorage.setItem('exp', exp)
@@ -104,15 +104,17 @@ export const AuthContextProvider = (props) => {
     useEffect(() => {
         if(localData){
             logoutTimer = setTimeout(logout, localData.duration)
-        }
+            let storedId = localStorage.getItem('userId')
+            setUserId(+storedId)
+          }
     })
 
 
     const contextValue = {
         token, 
+        location,
         userId,
         username,
-        location,
         login, 
         logout
     }
