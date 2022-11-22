@@ -1,4 +1,5 @@
 import {useState, useContext} from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import AuthContext from '../../store/authContext';
 import styles from './Auth.module.css'
@@ -11,7 +12,7 @@ const Auth = () => {
   const [register, setRegister] = useState(true)
 
   const authCtx = useContext(AuthContext)
- 
+  const nav = useNavigate()
   const handleAuth = e => {
     e.preventDefault()
 
@@ -26,6 +27,7 @@ const Auth = () => {
               console.log(authCtx)
               const {token, exp, userId, location, username} = res.data
               authCtx.login(token, exp, location, username, userId)
+              nav('/profile')
             })
         .catch(err=> {
           console.log(err)

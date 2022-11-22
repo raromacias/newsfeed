@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import AuthContext from "../../store/authContext";
 import styles from './Header.module.css';
 import HamburgerDrawer from "../HamburgerDrawer.js/HamburgerDrawer";
 
 const Header = ({setCategory, outerContainerId, pageWrapId}) => {
   const authCtx = useContext(AuthContext)
+  const nav = useNavigate()
   const styleActiveLink = ({ isActive }) => {
       return {
           color: isActive ? '#f57145' : ''
@@ -24,7 +25,10 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
                <NavLink style={styleActiveLink} to='profile'>Daily News</NavLink>
             </li>
             <li>
-               <button className='logout-btn' onClick={() => authCtx.logout()}>Logout</button>
+               <button className='logout-btn' onClick={() => {
+                authCtx.logout()
+                nav('/')
+                }}>Logout</button>
             </li>
             </ul>
           ) : (
