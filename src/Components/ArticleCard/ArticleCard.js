@@ -75,7 +75,7 @@ const ArticleCard = ({newsItem}) => {
           </span>
         </div>
       </div>
-      <button>Add to Favorites</button>
+      {token ? <button>Add to Favorites</button> : null}
       </form>
     </div>
   )

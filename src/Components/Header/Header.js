@@ -17,7 +17,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
       <nav>
         {
           authCtx.token ? (
-            <ul className='main-nav'>
+            <ul className={styles.mainnav}>
               <div className={styles.menu}>
                   <HamburgerDrawer setCategory={setCategory} outerContainerId={'outer-container'} pageWrapId={'page-wrap'}/>
               </div>
@@ -43,7 +43,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
             </li>
             </ul>
           ) : (
-            <ul className='main-nav'>
+            <ul className={styles.mainnav}>
             <li>
                <NavLink style={styleActiveLink} to='/'>Daily</NavLink>
            </li>        
