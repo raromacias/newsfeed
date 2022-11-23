@@ -8,7 +8,8 @@ const AuthContext = createContext({
     logout: () => {},
     userId: null, 
     location: null, 
-    username: null
+    username: null,
+    profilepicUrl: null
 })
 
 const calculateRemaining = (exp) => {
@@ -24,6 +25,7 @@ const getLocalData = () => {
     const storedUserId = localStorage.getItem('userId')
     const storedLocation = localStorage.getItem('location')
     const storedUsername = localStorage.getItem('username')
+    const storedprofilepicUrl = localStorage.getItem('profilepicUrl')
 
     const remainingTime = calculateRemaining(storedExp)
 
@@ -33,6 +35,7 @@ const getLocalData = () => {
         localStorage.removeItem('userId')
         localStorage.removeItem('location')
         localStorage.removeItem('username')
+        localStorage.removeItem('profilepicUrl')
         return null
     }
     
@@ -41,7 +44,8 @@ const getLocalData = () => {
         duration: remainingTime,
         userId: storedUserId,
         location: storedLocation,
-        username: storedUsername
+        username: storedUsername,
+        profilepicUrl: storedprofilepicUrl
     }
 }
 
@@ -52,12 +56,14 @@ export const AuthContextProvider = (props) => {
     let initialUserId
     let initialLocation
     let initialUsername
+    let initialprofilepicUrl
 
     if(localData){
         initialToken = localData.token
         initialUserId = localData.userId
         initialLocation = localData.location
         initialUsername = localData.username
+        initialprofilepicUrl = localData.profilepicUrl
     }
 
 
@@ -65,35 +71,40 @@ export const AuthContextProvider = (props) => {
     const [token, setToken] = useState(initialToken)
     const [location, setLocation] = useState(initialLocation)
     const [username, setUsername] = useState(initialUsername)
+    const [profilepicUrl, setprofilepicUrl] = useState(initialprofilepicUrl)
 
     const logout = useCallback(() => {
         setUserId(null)
         setToken(null)
         setLocation(null)
         setUsername(null)
+        setprofilepicUrl(null)
 
         localStorage.removeItem('token')
         localStorage.removeItem('expTime')
         localStorage.removeItem('userId')
         localStorage.removeItem('location')
         localStorage.removeItem('username')
+        localStorage.removeItem('profilepicUrl')
 
         if(logoutTimer) {
             clearTimeout(logoutTimer)
         }
     }, [])
 
-    const login = (token, exp, location, username, userId) => {
-        setUserId(userId)
+    const login = (token, exp, location, username, userId, profilepicUrl) => {
         setToken(token)
         setLocation(location)
         setUsername(username)
+        setUserId(userId)
+        setprofilepicUrl(profilepicUrl)
 
         localStorage.setItem('token', token)
-        localStorage.setItem('userId', userId)
+        localStorage.setItem('exp', exp)
         localStorage.setItem('location', location)
         localStorage.setItem('username', username)
-        localStorage.setItem('exp', exp)
+        localStorage.setItem('userId', userId)
+        localStorage.setItem('profilepicUrl', profilepicUrl)
 
        const remainingTime = calculateRemaining(exp)
 
@@ -115,6 +126,7 @@ export const AuthContextProvider = (props) => {
         location,
         userId,
         username,
+        profilepicUrl,
         login, 
         logout
     }

@@ -9,31 +9,35 @@ const Auth = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [location, setLocation] = useState('')
+  const [profilepicUrl, setprofilepicUrl] = useState('')
   const [register, setRegister] = useState(true)
 
   const authCtx = useContext(AuthContext)
+  
   const nav = useNavigate()
   const handleAuth = e => {
     e.preventDefault()
 
     const body = {
-      location,
+      username,
       password,
-      username
+      location,
+      profilepicUrl
     }
     axios.post(`${register ? `/register` : `/login`}`, body)
         .then(res=> {
               console.log(res.data)
               console.log(authCtx)
-              const {token, exp, userId, location, username} = res.data
-              authCtx.login(token, exp, location, username, userId)
+              const {token, exp, userId, location, username, profilepicUrl} = res.data
+              authCtx.login(token, exp, location, username, userId, profilepicUrl)
               nav('/profile')
             })
         .catch(err=> {
           console.log(err)
           setUsername('');
           setPassword('');
-          setLocation('')
+          setLocation('');
+          setprofilepicUrl('')
 
         })
       }  
@@ -61,6 +65,12 @@ const Auth = () => {
                    placeholder='Enter a location'
                    value={location}
                    onChange={e => setLocation(e.target.value)}
+                   />
+                   <input
+                   className={styles.forminput}
+                   placeholder='Enter a profile pic url'
+                   value={profilepicUrl}
+                   onChange={e => setprofilepicUrl(e.target.value)}
                    />
                <button className={styles.formbtn}>
                   Submit

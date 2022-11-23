@@ -20,7 +20,7 @@ const createToken = (username, id) => {
 module.exports = {
   register: async (req, res) => {
      try {
-          const {username, password, location} = req.body
+          const {username, password, location, profilepicUrl} = req.body
           let foundUser = await User.findOne({where: {username}})
           if (foundUser){
             res.status(400).send(
@@ -32,7 +32,8 @@ module.exports = {
               const newUser = await User.create({
                 username,
                 hashedPass: hash,
-                location
+                location,
+                profilepicUrl
               })
               const token = createToken(
                 newUser.dataValues.username,
@@ -43,6 +44,7 @@ module.exports = {
                 username: newUser.dataValues.username,
                 userId: newUser.dataValues.id,
                 location: newUser.dataValues.location,
+                profilepicUrl: newUser.dataValues.profilepicUrl,
                 token,
                 exp
               })
@@ -72,6 +74,7 @@ module.exports = {
                 username: foundUser.dataValues.username,
                 userId: foundUser.dataValues.id,
                 location: foundUser.dataValues.location,
+                profilepicUrl: foundUser.dataValues.profilepicUrl,
                 token,
                 exp
             })

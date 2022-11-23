@@ -11,6 +11,7 @@ module.exports = {
           },
         username: DataTypes.STRING,
         hashedPass: DataTypes.STRING,
-        location: DataTypes.STRING
+        location: DataTypes.STRING,
+        profilepicUrl: DataTypes.STRING(255)
       })
 }

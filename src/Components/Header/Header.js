@@ -21,7 +21,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
               <div className={styles.menu}>
                   <HamburgerDrawer setCategory={setCategory} outerContainerId={'outer-container'} pageWrapId={'page-wrap'}/>
               </div>
-            <li>
+            <li className={styles.newsicon}>
                <NavLink style={styleActiveLink} to='profile'>Daily News</NavLink>
             </li>
             <li>
@@ -29,6 +29,17 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
                 authCtx.logout()
                 nav('/')
                 }}>Logout</button>
+            </li>
+            <li>
+              <img
+              alt='profile pic'
+              src={
+                authCtx.profilepicUrl
+                  ? authCtx.profilepicUrl
+                  : null
+              }
+              className={styles.newsImage}
+              />
             </li>
             </ul>
           ) : (

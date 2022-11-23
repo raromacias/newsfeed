@@ -43,10 +43,10 @@ const Favorites = () => {
       {articles.map(article => {
         return (
               <div key={article.id} className='post-card'>
-                <img src={article.urlToImage} alt={article.title} />
-              <h2>{article.title}</h2>
-              <h4>{article.publishedAt}</h4>
-              <p>{article.description}</p>
+                  <img src={article.urlToImage} alt={article.title} />
+                   <h2>{article.title}</h2>
+                    <h4>{article.publishedAt}</h4>
+                      <p>{article.description}</p>
               {
                 userId === article.userId && 
                 <div>

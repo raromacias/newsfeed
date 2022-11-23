@@ -28,10 +28,10 @@ app.post('/register', register)
 app.post('/login', login)
 
 app.get('/favorites/:userId', isAuthenticated,getCurrentUserArticles)
-app.post('/favorites/:userId', addArticle)
+app.post('/favorites/:userId', isAuthenticated, addArticle)
 app.delete('/favorites/:id', isAuthenticated, deleteArticle)
 
-sequelize.sync()
+sequelize.sync({})
 .then(() => {
   app.listen(SERVER_PORT, () => console.log(`Up on ${SERVER_PORT}`))
 })
