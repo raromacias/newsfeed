@@ -1,9 +1,12 @@
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
+  width: 24px;
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  right: 12px;
+  bottom: 12px,
+  
 }
 
 .bm-burger-bars {

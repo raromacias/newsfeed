@@ -13,24 +13,26 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
       }
   }
   return ( 
-    <div className={styles.nav}>
-      <nav>
+    
+      <header className={styles.nav}>
         {
           authCtx.token ? (
-            <ul className={styles.mainnav}>
+            <div className={styles.container}>
+              <div className={styles.leftcontainer}>
               <div className={styles.menu}>
                   <HamburgerDrawer setCategory={setCategory} outerContainerId={'outer-container'} pageWrapId={'page-wrap'}/>
               </div>
-            <li className={styles.newsicon}>
+            <div className={styles.newsicon}>
                <NavLink style={styleActiveLink} to='profile'>Daily News</NavLink>
-            </li>
-            <li>
-               <button className='logout-btn' onClick={() => {
+            </div>
+            </div>
+            <div>
+               <button className={styles.logoutbtn} onClick={() => {
                 authCtx.logout()
                 nav('/')
                 }}>Logout</button>
-            </li>
-            <li>
+            </div>
+            <div>
               <img
               alt='profile pic'
               src={
@@ -40,23 +42,26 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
               }
               className={styles.newsImage}
               />
-            </li>
-            </ul>
+            </div>
+            
+             </div>
           ) : (
-            <ul className={styles.mainnav}>
-            <li>
+            <div className={styles.container}>
+            
+            <div>
                <NavLink style={styleActiveLink} to='/'>Daily</NavLink>
-           </li>        
-           <li>
+           </div>        
+           <div>
               <NavLink style={styleActiveLink} to='auth'>Login or Register</NavLink>
-           </li>
-               </ul>
+           </div>
+              
+               </div>
           )
         }
-      </nav>
+      </header>
 
     
-  </div> )
+   )
 };
 
 export default Header;

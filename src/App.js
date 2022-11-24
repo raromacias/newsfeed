@@ -39,7 +39,7 @@ getData();
 
   const authCtx = useContext(AuthContext)
   return (
-    <div className="App" id='outer-container'>
+    <div className={styles.App} id='outer-container'>
       <div id='page-wrap'>
       <Header setCategory={setCategory} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Routes>

@@ -1,11 +1,17 @@
 .App {
-  text-align: center;
-  height: 100%;
-  overflow: hidden;
+  box-sizing: border-box;
   color: rgba(0, 0, 0, .87);
-  margin: 0;
+  cursor: pointer;
+  display: block;
+  height: 1661px;
+  min-height: 100%;
+  position: relative;
   text-size-adjust: 100%;
-  box-sizing: inherit;
+  text-align: center;
+  white-space: normal;
+  overflow: hidden;
+  
+ 
 
 }
 
