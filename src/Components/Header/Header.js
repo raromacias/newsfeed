@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import AuthContext from "../../store/authContext";
 import styles from './Header.module.css';
+
 import HamburgerDrawer from "../HamburgerDrawer.js/HamburgerDrawer";
 
 const Header = ({setCategory, outerContainerId, pageWrapId}) => {
@@ -23,7 +24,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
                   <HamburgerDrawer setCategory={setCategory} outerContainerId={'outer-container'} pageWrapId={'page-wrap'}/>
               </div>
             <div className={styles.newsicon}>
-               <NavLink style={styleActiveLink} to='profile'>Daily News</NavLink>
+               <NavLink  style={styleActiveLink} to='profile'>Daily News</NavLink>
             </div>
             </div>
             <div>
@@ -49,7 +50,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
             <div className={styles.container}>
             
             <div>
-               <NavLink style={styleActiveLink} to='/'>Daily</NavLink>
+               <NavLink  style={styleActiveLink} to='/'>Daily News</NavLink>
            </div>        
            <div>
               <NavLink style={styleActiveLink} to='auth'>Login or Register</NavLink>

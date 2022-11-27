@@ -43,35 +43,43 @@ const Auth = () => {
       }  
       
   return (
-    <main>
-           <h1>the new news {register ? 'Register' : 'Login'} below!</h1>
+    <div className={styles.logincontainer}>
+           <h1 className={styles.headline}>Enter your details: {register ? 'Register' : 'Login'} below!</h1>
            {register ? (
             <div className={styles.authform}>
            <form onSubmit={e => handleAuth(e)}>
+            <div className={styles.inputdiv}>
                <input
                    className={styles.forminput}
                    placeholder='Create a username'
                    value = {username}
                    onChange={e => setUsername(e.target.value)}
                    />
+            </div>
+            <div className={styles.inputdiv}>
                <input
                    className={styles.forminput}
                    placeholder='Enter a password'
                    value={password}
                    onChange={e => setPassword(e.target.value)}
                    />
+            </div>
+            <div className={styles.inputdiv}>
                 <input
                    className={styles.forminput}
                    placeholder='Enter a location'
                    value={location}
                    onChange={e => setLocation(e.target.value)}
                    />
+            </div>
+            <div className={styles.inputdiv}>
                    <input
                    className={styles.forminput}
                    placeholder='Enter a profile pic url'
                    value={profilepicUrl}
                    onChange={e => setprofilepicUrl(e.target.value)}
                    />
+            </div>
                <button className={styles.formbtn}>
                   Submit
                </button>
@@ -80,16 +88,20 @@ const Auth = () => {
            ) : (
             <div className={styles.authform}>
            <form  onSubmit={e => handleAuth(e)}>
+            <div className={styles.inputdiv}>
                <input
                    className={styles.forminput}
                    placeholder='Create a username'
                    value = {username}
                    onChange={e => setUsername(e.target.value)}/>
+            </div>
+            <div className={styles.inputdiv}>
                <input
                    className={styles.forminput}
                    placeholder='Enter a password'
                    value={password}
                    onChange={e => setPassword(e.target.value) }/>
+            </div>
                <button className={styles.formbtn}>
                    Submit
                </button>
@@ -98,7 +110,7 @@ const Auth = () => {
                 )
               }
           <button className={styles.formbtn} onClick={() => setRegister(!register)}>{register ? "Login" : "Register"}</button>
-       </main>
+       </div>
   )
 }
 

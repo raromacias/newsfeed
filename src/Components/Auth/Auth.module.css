@@ -1,12 +1,126 @@
+.logincontainer {
+  margin-top: 100px;
+  box-sizing: border-box;
+  color: rgb(32, 33, 36);
+  color-scheme: light;
+  direction: ltr;
+  display: block;
+  font-size: 14px;
+  height: 331px;
+  line-height: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 390px;
+  
+
+}
+
+.headline {
+  box-sizing: border-box;
+  display: flex;
+  line-height: 32px;
+  justify-content: center;
+  text-align: center;
+  direction: ltr;
+  font-weight: 400;
+  font-size: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: black;
+}
+
 .authform {
   color:blue
 }
 
+.inputdiv {
+  box-sizing: content-box;
+  color: rgb(32, 33, 36);
+  color-scheme: light;
+  direction: ltr;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 14px;
+  height: 56px;
+  line-height: 20px;
+  min-width: 0%;
+  position: relative;
+  width: 342px;
+}
+
 .forminput {
-  color: tomato
+  appearance: auto;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgb(32, 33, 36);
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-left-color: rgb(32, 33, 36);
+  border-left-width: 0px;
+  border-right-color: rgb(32, 33, 36);
+  border-right-width: 0px;
+  border-top-color: rgb(32, 33, 36);
+  box-sizing: content-box;
+  color: rgb(32,33,36);
+  color-scheme: light;
+  cursor: text;
+  direction: ltr;
+  display: block;
+  font-size: 16px;
+  font-stretch: 100%;
+  font-weight: 400;
+  height: 28px;
+  letter-spacing: normal;
+  line-height: 24px;
+  margin: 2px;
+  min-width: 0%;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 12px;
+  text-align: left;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  word-spacing: 0px;
+  writing-mode: horizontal-tb;
+  z-index: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .formbtn {
-  color: rebeccapurple
+  align-items: center;
+  background-color: rgb(26, 115, 232);
+  border-bottom-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  color:rgb(255, 255, 255);
+  color-scheme: light;
+  cursor: default;
+  direction: ltr;
+  display: inline-flex;
+  font-size: 14px;
+  font-stretch: 100%;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: .15px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  min-width: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 79px;
+  border-radius: 12px;
+  text-indent: 0px;
 }
+
 

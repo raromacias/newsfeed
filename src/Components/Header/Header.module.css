@@ -17,6 +17,11 @@
     
   }
 
+  .navlink {
+    text-decoration: none;
+    color:inherit
+  }
+
   .container{
     box-sizing: border-box;
     color:rgb(0, 0, 0);

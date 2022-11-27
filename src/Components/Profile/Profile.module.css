@@ -1,3 +1,49 @@
 .wrapper {
+  box-sizing: border-box;
+  padding-top: 100px;
   background-color: whitesmoke;
+  display:grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+}
+
+.dailybanner {
+  align-items: center;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  white-space: normal;
+}
+.welcome{
+  font-size: 28px;
+  color: #202124;
+  font-weight: 700;
+  justify-content: stretch;
+  margin-block-start: 0px;
+}
+
+.infodiv {
+  box-sizing: border-box;
+  color: rgb(32, 33, 36);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-size-adjust: 100%;
+  white-space: normal;
+}
+
+.datediv {
+  color: rgb(95, 99, 104);
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 560px) {
+  .dailybanner {
+  max-width: 100%;
+  grid-column: span 12;
+}
 }

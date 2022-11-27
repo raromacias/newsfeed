@@ -10,10 +10,17 @@
   text-align: center;
   white-space: normal;
   overflow: hidden;
-  
- 
-
 }
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 
 
