@@ -1,9 +1,21 @@
 .wrapper {
+  align-items: stretch;
   box-sizing: border-box;
-  padding-top: 100px;
+  color:rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 784px;
+  margin:auto;
+  padding-top: 80px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-size-adjust: 100%;
+  white-space: normal;
   background-color: whitesmoke;
-  display:grid;
-  grid-template-columns: repeat(12,minmax(0,1fr));
+  
 }
 
 .dailybanner {
@@ -39,6 +51,7 @@
   font-weight: 400;
   opacity: 1;
   margin-top: 8px;
+  white-space: normal;
 }
 
 @media screen and (max-width: 560px) {
@@ -46,4 +59,11 @@
   max-width: 100%;
   grid-column: span 12;
 }
+}
+
+@media screen and (max-width:1023px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

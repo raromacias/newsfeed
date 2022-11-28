@@ -1,0 +1,30 @@
+.weathercontainer {
+  margin-left: 16px;
+  margin-right: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  text-size-adjust: 100%;
+  white-space: normal;
+}
+
+.capsule {
+  padding: 0;
+  padding-left: 20px;
+  min-width: 112px;
+  border: 1px solid #dadce0;
+  box-sizing: border-box;
+  border-radius: 70px;
+  height: fit-content;
+  display: block;
+  white-space: normal;
+}
+
+.text {
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #000000DE;
+  line-height: 24px;
+  text-size-adjust: 100%;
+  white-space: nowrap;
+}

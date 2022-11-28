@@ -23,8 +23,8 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
               <div className={styles.menu}>
                   <HamburgerDrawer setCategory={setCategory} outerContainerId={'outer-container'} pageWrapId={'page-wrap'}/>
               </div>
-            <div className={styles.newsicon}>
-               <NavLink  style={styleActiveLink} to='profile'>Daily News</NavLink>
+            <div className={styles.news}>
+               <NavLink  classname={styles.daily} style={styleActiveLink} to='profile'>Daily News</NavLink>
             </div>
             </div>
             <div>

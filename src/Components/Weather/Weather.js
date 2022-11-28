@@ -23,15 +23,15 @@ const Weather = () => {
 
 
   return (<div className={styles.weathercontainer}>
-    <div className={styles.top}>
-      <div className={styles.location}>
+    <div className={styles.capsule}>
+      <div className={styles.text}>
         <span>{data.name}</span>
       </div>
-      <div className={styles.temp}>
+      <div className={styles.text}>
         {data.main ? <span>{data.main.temp.toFixed()}°F</span> : null}
       </div>
-      <div className={styles.bottom}>
-        <div className={styles.feels}>
+      <div className={styles.capsule}>
+        <div className={styles.text}>
         <span>Feels like</span><br/>
           {data.main ? <span>{data.main.feels_like.toFixed()}°F</span> : null}
        </div>
