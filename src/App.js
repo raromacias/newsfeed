@@ -41,7 +41,7 @@ getData();
   return (
     <div className={styles.app} id='outer-container'>
       <div id='page-wrap'>
-      <Header setCategory={setCategory} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+      <Header setCategory={setCategory}/>
         <Routes>
           <Route 
             index 

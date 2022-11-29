@@ -6,10 +6,52 @@
   padding: 10px;
   margin-bottom: 12px;
   border-radius: 5px;
+  
 }
 
 .newsImage {
   object-fit: cover;
   width: 320px;
   height: 268px;
+  filter:brightness(96%);
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+ 
+}
+
+.title {
+  display: block;
+  font-weight: bold
+}
+
+.favebtn {
+  align-items: center;
+  background-color: rgb(26, 115, 232);
+  border-bottom-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  color:rgb(255, 255, 255);
+  color-scheme: light;
+  cursor: pointer;
+  direction: ltr;
+  display: inline-flex;
+  font-size: 14px;
+  font-stretch: 100%;
+  font-weight: 500;
+  height: 80px;
+  justify-content: center;
+  letter-spacing: .15px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  min-width: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 100px;
+  border-radius: 12px;
+  text-indent: 0px;
 }

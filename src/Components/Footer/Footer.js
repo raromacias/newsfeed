@@ -15,7 +15,7 @@ const Footer = () => {
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
         <a href="https://github.com/raromacias" target="__blank">
-          <i className="fas fa-link fa-2x"></i>
+        <i class="fa-brands fa-square-github"></i>
         </a>
       </div>
     </div>

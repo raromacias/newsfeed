@@ -27,6 +27,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
                <NavLink  classname={styles.daily} style={styleActiveLink} to='profile'>Daily News</NavLink>
             </div>
             </div>
+            <div className={styles.rightcontainer}>
             <div>
                <button className={styles.logoutbtn} onClick={() => {
                 authCtx.logout()
@@ -44,7 +45,7 @@ const Header = ({setCategory, outerContainerId, pageWrapId}) => {
               className={styles.newsImage}
               />
             </div>
-            
+            </div>
              </div>
           ) : (
             <div className={styles.container}>

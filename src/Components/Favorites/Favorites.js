@@ -39,11 +39,12 @@ const Favorites = () => {
 
     
   return articles.length >= 1 ? (
-    <div className={styles.favoritescard}>
+    <div className={styles.favoriteswrapper}>
       {articles.map(article => {
         return (
-              <div key={article.id} className='post-card'>
-                  <img src={article.urlToImage} alt={article.title} className={styles.favImage}/>
+          <div className={styles.newswrapper}>
+              <div key={article.id} className= {styles.articlecard}>
+                  <img src={article.urlToImage} alt={article.title} className={styles.faveImage}/>
                    <h2>{article.title}</h2>
                     <h4>{article.publishedAt}</h4>
                       <p>{article.description}</p>
@@ -55,6 +56,7 @@ const Favorites = () => {
                         </button>
                 </div>
               }
+          </div>
           </div>
             )
            })}

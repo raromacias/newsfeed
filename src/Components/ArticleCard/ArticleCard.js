@@ -56,7 +56,7 @@ const ArticleCard = ({newsItem}) => {
         </a>
         <div className="newsText">
         <div>
-          <span className="title">{newsItem.title}</span>
+          <span className={styles.title}>{newsItem.title}</span>
           <br />
             
             {" "}
@@ -73,7 +73,7 @@ const ArticleCard = ({newsItem}) => {
           
         </div>
       </div>
-      {token ? <button>Add to Favorites</button> : null}
+      {token ? <button className={styles.favebtn}>Add to Favorites</button> : null}
       </form>
     </div>
   )

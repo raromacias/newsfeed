@@ -2,12 +2,13 @@ import "./HamburgerDrawer.css";
 import {slide as Menu} from 'react-burger-menu';
 import categories from "../../data/category";
 
-const HamburgerDrawer = ({setCategory, outerContainerId, pageWrapId}) => {
+const HamburgerDrawer = ({setCategory}) => {
 
   return (
     
     <Menu>
       <a href="/favorites">Favorites</a>
+      <hr/>
       <ul>
         {categories.map((text, index) => (
           <li
@@ -15,8 +16,6 @@ const HamburgerDrawer = ({setCategory, outerContainerId, pageWrapId}) => {
           button="true"
           onClick={() => setCategory(text)}
           key={text}
-          pageWrapId={pageWrapId}
-          outerContainerId={outerContainerId}
           >
             <p>{text}</p>
           </li>

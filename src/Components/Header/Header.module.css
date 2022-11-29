@@ -113,13 +113,49 @@
     width: 32px;
     z-index: 0;
     padding-left: 0px;
+    margin: 8px;
 
   }
 
   .logoutbtn {
-    color: rgb(60, 64, 67);
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    max-height: 40px;
+    align-items: center;
+    background-color: rgb(26, 115, 232);
+    border-bottom-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    color:rgb(255, 255, 255);
+    color-scheme: light;
+    cursor: default;
+    direction: ltr;
+    display: inline-flex;
+    font-size: 14px;
+    font-stretch: 100%;
+    font-weight: 500;
+    height: 36px;
+    justify-content: center;
+    letter-spacing: .15px;
+    line-height: 20px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    min-width: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 79px;
+    border-radius: 12px;
+    text-indent: 0px;
+  }
+  
+
+  .rightcontainer {
+    box-sizing: border-box;
+    height: 48px;
+    padding: 0 4px;
+    display: flex;
+    justify-content:flex-end;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    
   }
   
