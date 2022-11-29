@@ -1,18 +1,36 @@
 .logincontainer {
-  margin-top: 100px;
   box-sizing: border-box;
   color: rgb(32, 33, 36);
   color-scheme: light;
   direction: ltr;
   display: block;
+  flex-grow: 1;
   font-size: 14px;
-  height: 331px;
   line-height: 20px;
+  background-color: white;
+  height:100%;
+  margin-top: 100px;
   padding-left: 24px;
   padding-right: 24px;
   width: 390px;
-  
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 
+}
+
+@media (min-width: 601px) {
+  .logincontainer {
+    height: auto;
+    min-height: 500px;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 450px){
+  .logincontainer{
+    padding: 48px 40px 36px;
+  }
 }
 
 .headline {
@@ -30,7 +48,10 @@
 }
 
 .authform {
-  color:blue
+  color:blue;
+  margin-bottom: auto;
+  box-sizing: border-box;
+  
 }
 
 .inputdiv {

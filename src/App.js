@@ -21,7 +21,7 @@ const App = () => {
   const getData = async () => {
     try {
       
-      const news = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`)
+       await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`)
       .then((res) => {
         console.log(res.data);
         setNewsArray(res.data.articles);
@@ -39,7 +39,7 @@ getData();
 
   const authCtx = useContext(AuthContext)
   return (
-    <div className={styles.App} id='outer-container'>
+    <div className={styles.app} id='outer-container'>
       <div id='page-wrap'>
       <Header setCategory={setCategory} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Routes>

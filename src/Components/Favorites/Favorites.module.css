@@ -1,0 +1,16 @@
+.favoritescard {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.favImage {
+  object-fit: cover;
+  width: 320px;
+  height: 268px;
+}

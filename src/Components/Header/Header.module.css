@@ -99,10 +99,12 @@
     box-sizing: border-box;
     justify-content: flex-end;
     background-size: 32px 32px;
+    border: 0;
+    border-radius: 50%;
     color: rgb(0, 0, 0);
     cursor:pointer;
     display: flex;
-    height: 48px;
+    height: 32px;
     line-height: normal;
     position:relative;
     text-size-adjust: 100%;

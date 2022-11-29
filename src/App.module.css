@@ -1,9 +1,9 @@
-.App {
+.app {
   box-sizing: border-box;
   color: rgba(0, 0, 0, .87);
   cursor: pointer;
   display: block;
-  height: 1661px;
+  height: auto;
   min-height: 100%;
   position: relative;
   text-size-adjust: 100%;

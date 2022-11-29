@@ -17,7 +17,7 @@ const Favorites = () => {
       })
         .then(res => setArticles(res.data)) 
         .catch(err => console.log(err))
-    }, [userId])
+    }, [userId, token])
 
     useEffect(() => {
       getCurrentUserArticles()
@@ -43,7 +43,7 @@ const Favorites = () => {
       {articles.map(article => {
         return (
               <div key={article.id} className='post-card'>
-                  <img src={article.urlToImage} alt={article.title} />
+                  <img src={article.urlToImage} alt={article.title} className={styles.favImage}/>
                    <h2>{article.title}</h2>
                     <h4>{article.publishedAt}</h4>
                       <p>{article.description}</p>

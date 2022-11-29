@@ -1,5 +1,5 @@
 import styles from './ArticleCard.module.css';
-import { NavLink , useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { useContext } from 'react';
 import axios from 'axios';
 import AuthContext from '../../store/authContext';
@@ -43,6 +43,7 @@ const ArticleCard = ({newsItem}) => {
   return (
     <div className={styles.artcontainer}>
       <form onSubmit={handleSubmit}>
+      <a href={newsItem.url} target="__blank">
       <img 
         alt={newsItem.title}
         src={
@@ -52,12 +53,13 @@ const ArticleCard = ({newsItem}) => {
         }
         className={styles.newsImage}
         />
+        </a>
         <div className="newsText">
         <div>
           <span className="title">{newsItem.title}</span>
           <br />
-            <a href={newsItem.url} target="__blank">
-            </a>{" "}
+            
+            {" "}
             <span className="muted">
               {" "}
               {time
@@ -68,11 +70,7 @@ const ArticleCard = ({newsItem}) => {
           </div>
         <div className="lowerNewsText">
           <div className="description">{newsItem.description}</div>
-          <span className="readmore">
-            read more at{" "}
-            <NavLink to={newsItem.url} target="__blank" className="source">
-            </NavLink>
-          </span>
+          
         </div>
       </div>
       {token ? <button>Add to Favorites</button> : null}

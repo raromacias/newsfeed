@@ -15,6 +15,8 @@ const HamburgerDrawer = ({setCategory, outerContainerId, pageWrapId}) => {
           button="true"
           onClick={() => setCategory(text)}
           key={text}
+          pageWrapId={pageWrapId}
+          outerContainerId={outerContainerId}
           >
             <p>{text}</p>
           </li>
