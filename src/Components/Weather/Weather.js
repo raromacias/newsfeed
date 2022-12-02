@@ -31,7 +31,7 @@ const Weather = () => {
         {data.main ? <span>{data.main.temp.toFixed()}°F</span> : null}
       </div>
       <div className={styles.capsule}>
-        <div className={styles.text}>
+        <div className={styles.feels}>
         <span>Feels like</span><br/>
           {data.main ? <span>{data.main.feels_like.toFixed()}°F</span> : null}
        </div>

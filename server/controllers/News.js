@@ -13,9 +13,9 @@ module.exports = {
                 attributes: ['username']
             }]
         })
-        res.status(200).send(articles)
+            res.status(200).send(articles)
     } catch (error) {
-        console.log('ERROR IN getUserFavorites')
+        console.log('ERROR IN getUserArticles')
         console.log(error)
         res.sendStatus(400)  
     }
@@ -23,7 +23,6 @@ module.exports = {
   
   
   addArticle: async (req,res) => {
-    console.log(req.body)
     try {
       const { 
         description,
@@ -41,7 +40,7 @@ module.exports = {
           title,
           userId
         })
-        res.sendStatus(200) 
+            res.sendStatus(200) 
     } catch (error) {
       console.log('Error in adding article to Favorites')
       res.sendStatus(400)
@@ -55,8 +54,8 @@ module.exports = {
      res.sendStatus(200)
  }catch (error) {
      console.log('ERROR IN deleting article from favorites')
- console.log(error)
- res.sendStatus(400)
+      console.log(error)
+        res.sendStatus(400)
  }
 }
 

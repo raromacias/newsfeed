@@ -3,7 +3,11 @@ import { useState, useEffect, useContext, useCallback } from "react";
 import styles from './Favorites.module.css';
 import axios from "axios";
 
+
 const Favorites = () => {
+
+  
+
 
   const {userId, token} = useContext(AuthContext)
   
@@ -44,9 +48,11 @@ const Favorites = () => {
         return (
           <div className={styles.newswrapper}>
               <div key={article.id} className= {styles.articlecard}>
+              <a href={article.url} target="__blank">
                   <img src={article.urlToImage} alt={article.title} className={styles.faveImage}/>
+                  </a>
                    <h2>{article.title}</h2>
-                    <h4>{article.publishedAt}</h4>
+                  <h4>{new Date(article.publishedAt).toLocaleDateString()}</h4>
                       <p>{article.description}</p>
               {
                 userId === article.userId && 

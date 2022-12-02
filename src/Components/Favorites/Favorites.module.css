@@ -35,6 +35,8 @@
 h2 {
   display: block;
   font-weight: bold;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .articlecard {
@@ -45,6 +47,10 @@ h2 {
   padding: 10px;
   margin-bottom: 12px;
   border-radius: 5px;
+}
+
+.date {
+  font-size: small;
 }
 
 
@@ -94,6 +100,15 @@ h2 {
   width: 100px;
   border-radius: 12px;
   text-indent: 0px;
+}
+p{
+  margin-left: 23%;
+  margin-right: 23%;
+}
+@media (max-width: 833px){
+  p{
+    display: none;
+  }
 }
 
 

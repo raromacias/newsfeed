@@ -11,19 +11,20 @@
 
 .newsImage {
   object-fit: cover;
-  width: 320px;
-  height: 268px;
+  width: 55%;
+  height: 50%;
   filter:brightness(96%);
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 16px;
   align-items: center;
+
  
 }
 
 .title {
   display: block;
-  font-weight: bold
+  font-weight: bolder;
 }
 
 .favebtn {
@@ -54,4 +55,24 @@
   width: 100px;
   border-radius: 12px;
   text-indent: 0px;
+}
+.date {
+  font-size: small;
+}
+.newsText {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.lowerNewsText {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media (max-width: 833px){
+  .lowerNewsText{
+    display: none;
+  }
+  .favebtn {
+    height: 5%;
+  }
 }

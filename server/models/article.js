@@ -1,10 +1,5 @@
-const {
-  DataTypes
-} = require('sequelize')
-
-const {
-  sequelize
-} = require('../util/database')
+const {DataTypes} = require('sequelize')
+const {sequelize} = require('../util/database')
 
 module.exports = {
   Article: sequelize.define('article', {

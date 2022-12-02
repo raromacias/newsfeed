@@ -6,7 +6,6 @@ import AuthContext from '../../store/authContext';
 
 
 const ArticleCard = ({newsItem}) => {
-  console.log(newsItem)
 
   const navigate = useNavigate()
   const {userId, token} = useContext(AuthContext)
@@ -20,7 +19,7 @@ const ArticleCard = ({newsItem}) => {
     e.preventDefault()
 
     let body = {
-      description: newsItem.description,
+          description: newsItem.description,
           urlToImage: newsItem.urlToImage,
           url: newsItem.url,
           publishedAt: newsItem.publishedAt,
@@ -50,17 +49,15 @@ const ArticleCard = ({newsItem}) => {
           newsItem.urlToImage
             ? newsItem.urlToImage
             : null
-        }
+            }
         className={styles.newsImage}
         />
         </a>
-        <div className="newsText">
+        <div className={styles.newsText}>
         <div>
           <span className={styles.title}>{newsItem.title}</span>
-          <br />
-            
-            {" "}
-            <span className="muted">
+          {" "}
+            <span className={styles.date}>
               {" "}
               {time
                 ? `${hour - 12}:${date[4].substring(3, 5)} pm`
@@ -68,7 +65,8 @@ const ArticleCard = ({newsItem}) => {
               on {date[2]} {date[1]} {date[3]}, {date[0]}
             </span>
           </div>
-        <div className="lowerNewsText">
+          <br />
+        <div className={styles.lowerNewsText}>
           <div className="description">{newsItem.description}</div>
           
         </div>
