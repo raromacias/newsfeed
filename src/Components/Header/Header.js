@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 
 import HamburgerDrawer from "../HamburgerDrawer.js/HamburgerDrawer";
 
-const Header = ({setCategory, outerContainerId, pageWrapId}) => {
+const Header = ({setCategory}) => {
   const authCtx = useContext(AuthContext)
   const nav = useNavigate()
   const styleActiveLink = ({ isActive }) => {
