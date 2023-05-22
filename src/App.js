@@ -33,7 +33,7 @@ const App = () => {
 };
 useEffect(() => {
 getData();
-},[newsResults, loadMore, category]);
+},[newsResults, loadMore, category, getData]);
 
 
 
