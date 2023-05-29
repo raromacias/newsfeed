@@ -42,12 +42,12 @@ const ArticleCard = ({newsItem}) => {
   return (
     <div className={styles.artcontainer}>
       <form onSubmit={handleSubmit}>
-      <a href={newsItem.url} target="__blank">
+      <a href={newsItem.link} target="__blank">
       <img 
         alt={newsItem.title}
         src={
-          newsItem.urlToImage
-            ? newsItem.urlToImage
+          newsItem.props.image
+            ? newsItem.props.image
             : null
             }
         className={styles.newsImage}
@@ -55,7 +55,7 @@ const ArticleCard = ({newsItem}) => {
         </a>
         <div className={styles.newsText}>
         <div>
-          <span className={styles.title}>{newsItem.title}</span>
+          <span className={styles.title}>{newsItem.props.title}</span>
           {" "}
             <span className={styles.date}>
               {" "}

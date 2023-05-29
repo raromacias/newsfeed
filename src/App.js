@@ -19,17 +19,36 @@ const App = () => {
 
 
   const getData = async () => {
+    const options = {
+      method: 'GET',
+      url: 'https://google-news-api1.p.rapidapi.com/search',
+      params: {
+        language: 'EN'
+      },
+      headers: {
+        'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+        'X-RapidAPI-Host': 'google-news-api1.p.rapidapi.com'
+      }
+    };
+    
     try {
-      
-       await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`)
-      .then((res) => {
-        console.log(res.data);
-        setNewsArray(res.data.articles);
-        setNewsResults(res.data.totalResults)
-      });
+      const response = await axios.request(options);
+      console.log(response.data);
     } catch (error) {
-      console.log(error)
+      console.error(error);
     }
+
+    // try {
+      
+    //    await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`)
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     setNewsArray(res.data.articles);
+    //     setNewsResults(res.data.totalResults)
+    //   });
+    // } catch (error) {
+    //   console.log(error)
+    // }
 };
 useEffect(() => {
 getData();
