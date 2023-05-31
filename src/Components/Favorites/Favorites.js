@@ -49,10 +49,10 @@ const Favorites = () => {
           <div className={styles.newswrapper}>
               <div key={article.id} className= {styles.articlecard}>
               <a href={article.url} target="__blank">
-                  <img src={article.urlToImage} alt={article.title} className={styles.faveImage}/>
+                  <img src={article.image} alt={article.title} className={styles.faveImage}/>
                   </a>
                    <h2>{article.title}</h2>
-                  <h4>{new Date(article.publishedAt).toLocaleDateString()}</h4>
+                  <h4>{new Date(article.date).toLocaleDateString()}</h4>
                       <p>{article.description}</p>
               {
                 userId === article.userId && 

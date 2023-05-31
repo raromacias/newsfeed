@@ -33,7 +33,9 @@ const App = () => {
     
     try {
       const response = await axios.request(options);
-      console.log(response.data);
+      console.log(response.data.news.news);
+      setNewsArray(response.data.news.news);
+      setNewsResults(response.data.news.total);
     } catch (error) {
       console.error(error);
     }

@@ -10,9 +10,9 @@ module.exports = {
       type: DataTypes.INTEGER
     },
     description: DataTypes.STRING,
-    urlToImage: DataTypes.STRING,
+    image: DataTypes.STRING,
     url: DataTypes.STRING,
-    publishedAt: DataTypes.STRING,
+    date: DataTypes.STRING,
     title: DataTypes.STRING
   })
 }

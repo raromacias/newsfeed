@@ -26,17 +26,17 @@ module.exports = {
     try {
       const { 
         description,
-        urlToImage,
+        image,
         url,
-        publishedAt,
+        date,
         title
       } = req.body;
         const {userId} = req.params
         await Article.create({
           description,
-          urlToImage,
+          image,
           url,
-          publishedAt,
+          date,
           title,
           userId
         })

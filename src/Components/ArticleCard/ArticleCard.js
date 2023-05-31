@@ -10,7 +10,7 @@ const ArticleCard = ({newsItem}) => {
   const navigate = useNavigate()
   const {userId, token} = useContext(AuthContext)
 
-  const fulldate = new Date(newsItem.publishedAt);
+  const fulldate = new Date(newsItem.date);
   let date = fulldate.toString().split(" ");
   const hour = parseInt(date[4].substring(0, 2));
   const time = hour > 12 ? true : false;
@@ -20,9 +20,9 @@ const ArticleCard = ({newsItem}) => {
 
     let body = {
           description: newsItem.description,
-          urlToImage: newsItem.urlToImage,
+          image: newsItem.props.image,
           url: newsItem.url,
-          publishedAt: newsItem.publishedAt,
+          date: newsItem.date,
           title: newsItem.title,
           userId: +userId 
     }
@@ -55,7 +55,7 @@ const ArticleCard = ({newsItem}) => {
         </a>
         <div className={styles.newsText}>
         <div>
-          <span className={styles.title}>{newsItem.props.title}</span>
+          <span className={styles.title}>{newsItem.title}</span>
           {" "}
             <span className={styles.date}>
               {" "}
