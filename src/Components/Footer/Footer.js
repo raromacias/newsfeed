@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <span className={styles.name}>
-        Daily News made by -{" "}
+        Beach City News made by -{" "}
         <a href="https://www.linkedin.com/in/gerardo-macias-2a912131/" target="__blank">
           Gerardo Macias
         </a>

@@ -51,7 +51,7 @@ const Header = ({setCategory}) => {
             <div className={styles.container}>
             
             <div>
-               <NavLink  style={styleActiveLink} to='/'>Daily News</NavLink>
+               <NavLink  style={styleActiveLink} to='/'> Beach City News </NavLink>
            </div>        
            <div>
               <NavLink style={styleActiveLink} to='auth'>Login or Register</NavLink>
