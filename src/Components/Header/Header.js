@@ -24,7 +24,7 @@ const Header = ({setCategory}) => {
                   <HamburgerDrawer setCategory={setCategory} outerContainerId={'outer-container'} pageWrapId={'page-wrap'}/>
               </div>
             <div className={styles.news}>
-               <NavLink  classname={styles.daily} style={styleActiveLink} to='profile'>Daily News</NavLink>
+               <NavLink  classname={styles.daily} style={styleActiveLink} to='profile'>Beach City News</NavLink>
             </div>
             </div>
             <div className={styles.rightcontainer}>
